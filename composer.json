@@ -1,0 +1,24 @@
+{
+    "name": "achados/stranger",
+    "description": "perdidos e achados em php",
+    "autoload": {
+        "psr-4": {
+            "Achados\\Stranger\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "António Quimbuadi",
+            "email": "antonioquimbuadi@gmail.com"
+        }
+    ],
+    "require":{},
+    "autoload":{
+        "psr-4":{
+            "Models\\":"models/",
+            "Classes\\":"classes/",
+            "Controllers\\":"controllers/",
+            "Config\\":"Config/"
+        }
+    }
+}      

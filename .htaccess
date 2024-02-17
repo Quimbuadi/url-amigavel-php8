@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirecionar todas as solicitações para o arquivo index.php, exceto para arquivos reais ou diretórios existentes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

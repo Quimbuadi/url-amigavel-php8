@@ -1,0 +1,39 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    border: 0px solid red;
+}
+.header{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0px solid rgb(0, 57, 161);
+    padding: 0px 15%;
+    background-color: rgb(45, 111, 253);
+}
+.esquerda{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 0px solid blue;
+}
+.direita{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 0px solid blue;
+}
+ul{
+    flex-direction: row;
+    justify-content: space-around;
+}
+li{
+    
+    margin: 10px 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
