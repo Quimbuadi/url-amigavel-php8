@@ -1,22 +1,22 @@
 <?php
 
-#obtendo a url amigavel
-$request_uri = $_SERVER['REQUEST_URI'];
+$url = (!empty($_GET['url']))?$_GET['url']:$_GET['url']='home';
 
-#divindo a url separada por / para obter o caminho
+//converter a url em array:
+$url = explode('/', $url);
 
-$path = explode('/', $request_uri);
-$project_name = $path[1];
+$arquivo = 'paginas/'.$url[0].'.php';
+
+if(is_file($arquivo)){
+    include $arquivo;
+}else{
+    include 'paginas/404.php';
+}
+
+include_once "./Config/conf.php";
+include_once "./include/menu.php";
 
 echo "<pre>";
-
-print_r($path);
-if($path[2]==""){
-    echo "sim";
-}else{
-    echo "não";
-}
-echo "<br>";
-var_dump($request_uri);
-
-echo $_GET['url'];
+#var_dump($url);
+#echo "<pre>";
+#var_dump($arquivo);
